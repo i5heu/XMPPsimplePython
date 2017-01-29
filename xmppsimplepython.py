@@ -23,7 +23,7 @@ class SendMsgBot(sleekxmpp.ClientXMPP):
         self.disconnect(wait=True)
 
 def SendXMPP(msg):
-   xmpp = SendMsgBot("JabberIDwithDomain-send@example.com", "JabberPassword", "to@example.com", msg)
+   xmpp = SendMsgBot("JabberIDwithDomain-send@example.com", "JabberPassword", "to@example.com", str(msg))
    xmpp.register_plugin('xep_0030')
    xmpp.register_plugin('xep_0199')
 
